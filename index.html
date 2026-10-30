@@ -342,7 +342,7 @@ a.mea-chip:hover{border-color:var(--mea-blue-400);background:var(--mea-blue-50)}
 .mea-dialog__close{position:absolute;right:12px;top:10px;width:40px;height:40px;border:0;background:transparent;font:inherit;font-size:24px;line-height:1;color:var(--ink-soft);cursor:pointer;border-radius:50%;z-index:2}
 .mea-dialog__close:hover{background:var(--paper-sunk)}
 .mea-dialog h2{margin:0;font-size:21px;line-height:1.3;color:var(--mea-blue-900);padding-right:40px}
-.mea-prog{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-right:44px}
+.mea-prog{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-right:44px}
 .mea-prog i{display:block;height:4px;border-radius:2px;background:var(--line-strong)}
 .mea-prog i.on{background:var(--mea-blue-800)}
 .mea-jstage{background:var(--stage);color:var(--mea-gray-0);border-radius:var(--radius-l);padding:20px 24px;display:flex;flex-direction:column;gap:var(--space-4)}
@@ -477,6 +477,44 @@ textarea.mea-input{border-radius:var(--radius-box);padding:12px 18px;min-height:
 .mea-scope__t{font-size:13px;color:var(--ink-soft)}.mea-scope__t b{color:var(--mea-blue-900)}
 .mea-scope__b{min-height:36px;padding:0 16px;font-size:13px}
 .mea-bars li.is-zero{color:var(--ink-soft)}.mea-bars li.is-zero b{color:var(--ink-soft);font-weight:500}
+
+.mea-tl3{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1100px) and (min-width:861px){.mea-tl3{grid-template-columns:repeat(2,minmax(0,1fr))}.mea-tl3::before{display:none}}
+.mea-plan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-3);margin-top:var(--space-4)}
+.mea-plan .mea-bignum{flex-direction:column;gap:4px;background:var(--paper);border-radius:var(--radius-box);padding:var(--space-3) var(--space-4)}
+@media (max-width:720px){.mea-plan{grid-template-columns:minmax(0,1fr)}}
+.mea-subh{font-size:15px;font-weight:700;color:var(--mea-blue-900);margin:var(--space-5) 0 0}
+@media (max-width:560px){.mea-story-dlg .mea-jstat__t{font-size:12.5px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.mea-story-dlg .mea-jstage{overflow:hidden}}
+
+/* conexões: obras e vídeos */
+.mea-conhead{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--space-3);flex-wrap:wrap}
+.mea-obras{display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-4)}
+.mea-obra{display:grid;grid-template-columns:76px minmax(0,1fr);gap:var(--space-4);padding:var(--space-4);border:1px solid var(--line-strong);border-radius:var(--radius-box);background:var(--paper-raised)}
+.mea-obra__cv{width:76px;aspect-ratio:3/4;border-radius:var(--radius-s);background:var(--mea-blue-800);color:var(--mea-gray-0);display:flex;flex-direction:column;justify-content:space-between;padding:8px;font-size:10.5px;font-weight:600;line-height:1.2}
+.mea-obra__cv b{font-size:18px;font-weight:700}
+.mea-obra__t{margin:6px 0 0;font-size:16px;line-height:1.35;font-weight:700;color:var(--mea-blue-900)}
+.mea-obra__a{margin:4px 0 0;font-size:13.5px;color:var(--ink)}
+.mea-obra__v{margin:2px 0 0;font-size:12.5px;color:var(--ink-soft)}
+.mea-obra__rel{margin:10px 0 0;font-size:13.5px;background:var(--paper);border-left:3px solid var(--ea);border-radius:0 var(--radius-s) var(--radius-s) 0;padding:8px 12px}
+.mea-obra__rel b{color:var(--mea-teal-800)}
+.mea-obra .mea-actions{margin-top:var(--space-3)}
+@media (max-width:560px){.mea-obra{grid-template-columns:minmax(0,1fr)}.mea-obra__cv{width:auto;aspect-ratio:auto;flex-direction:row;align-items:center;gap:8px}}
+.mea-vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:var(--space-4);margin-top:var(--space-4)}
+.mea-vid{display:flex;flex-direction:column;gap:var(--space-2);scroll-margin-top:150px}
+.mea-vid__frame{aspect-ratio:16/9;border-radius:var(--radius-box);overflow:hidden;border:1px solid var(--line-strong);background:var(--paper-sunk)}
+.mea-vid__frame iframe,.mea-vid__frame video{display:block;width:100%;height:100%;border:0;background:#000}
+.mea-vid__t{margin:4px 0 0;font-size:15px;font-weight:700;color:var(--mea-blue-900)}
+.mea-vid .mea-cites{margin-top:4px}
+.mea-vid.is-flash{animation:mea-flash 1.8s ease-out;border-radius:var(--radius-box)}
+@media (max-width:720px){.mea-tab__nm{font-size:11px}}
+
+.mea-docnav{display:flex;flex-wrap:wrap}
+.mea-docnav__n{font-size:11.5px;font-weight:700;opacity:.75;margin-left:4px}
+.mea-dview{display:flex;flex-direction:column;gap:var(--space-4)}
+.mea-qgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-5);margin-top:var(--space-2)}
+.mea-qgrid .mea-bars li{grid-template-columns:minmax(0,1fr) 44px;row-gap:4px}
+.mea-qgrid .mea-bars__bar{grid-column:1/-1;order:3;height:10px}
+@media (max-width:960px){.mea-qgrid{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
@@ -509,9 +547,9 @@ textarea.mea-input{border-radius:var(--radius-box);padding:12px 18px;min-height:
         </div>
       </div>
       <h1 class="mea-pro__name" id="h-nome">Tratado de Educação Ambiental para Sociedades Sustentáveis e Responsabilidade Global</h1>
-      <p class="mea-pro__sub">Rede Planetária · aprovado em 1992, retomado em 2012</p>
+      <p class="mea-pro__sub">Rede Planetária · aprovado em 1992, retomado em 2012 e em 2025</p>
     </div>
-    <p class="mea-note mea-stories__t">Conheça a história em 6 etapas</p>
+    <p class="mea-note mea-stories__t">Conheça a história em 7 etapas</p>
     <div class="mea-stories" id="stories" role="list"></div>
   </section>
 
@@ -521,7 +559,7 @@ textarea.mea-input{border-radius:var(--radius-box);padding:12px 18px;min-height:
       <button class="mea-tab" role="tab" id="t-tratado" aria-controls="tratado" aria-selected="true" data-tab="tratado"><span class="mea-tab__ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3M9 8h6M9 12h6"/></svg></span><span class="mea-tab__tx"><span class="mea-tab__nm">O Tratado</span><span class="mea-tab__mt" id="m-tratado">16 princípios</span></span></button>
       <button class="mea-tab" role="tab" id="t-historia" aria-controls="historia" aria-selected="false" data-tab="historia"><span class="mea-tab__ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 4v16"/><circle cx="6" cy="6" r="2" fill="currentColor"/><circle cx="6" cy="12" r="2" fill="currentColor"/><circle cx="6" cy="18" r="2" fill="currentColor"/><path d="M11 6h9M11 12h6M11 18h8"/></svg></span><span class="mea-tab__tx"><span class="mea-tab__nm">História</span><span class="mea-tab__mt" id="m-historia">21 registros</span></span></button>
       <button class="mea-tab" role="tab" id="t-rede" aria-controls="rede" aria-selected="false" data-tab="rede"><span class="mea-tab__ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 4.5 6 4.5 9S15 18 12 21c-3-3-4.5-6-4.5-9S9 6 12 3z"/></svg></span><span class="mea-tab__tx"><span class="mea-tab__nm">Rede Planetária</span><span class="mea-tab__mt" id="m-rede">67 adesões</span></span></button>
-      <button class="mea-tab" role="tab" id="t-documentos" aria-controls="documentos" aria-selected="false" data-tab="documentos"><span class="mea-tab__ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span><span class="mea-tab__tx"><span class="mea-tab__nm">Documentos</span><span class="mea-tab__mt" id="m-documentos">6 materiais</span></span></button>
+      <button class="mea-tab" role="tab" id="t-documentos" aria-controls="documentos" aria-selected="false" data-tab="documentos"><span class="mea-tab__ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span><span class="mea-tab__tx"><span class="mea-tab__nm">Documentos</span><span class="mea-tab__mt" id="m-documentos"></span></span></button>
       </div>
   </div>
 
@@ -590,20 +628,48 @@ textarea.mea-input{border-radius:var(--radius-box);padding:12px 18px;min-height:
   <!-- ===================== REDE ===================== -->
   <section class="mea-pane" id="rede" role="tabpanel" aria-labelledby="t-rede" hidden>
     <div class="mea-panel" id="missao">
-      <h2 class="mea-panel__title">A Rede Planetária: missão e continuidade</h2>
-      <p class="mea-text" style="margin-top:6px">A Rede Planetária é a forma que a Jornada assume depois da Rio+20: uma rede permanente, em que a Secretaria Executiva atua como serviço internacional a favor das alianças. A missão definida em Serra Serena é trazer a EA para o seu devido lugar, o centro, em três espaços.</p>
+      <h2 class="mea-panel__title">A Rede Planetária (PlanTEA)</h2>
+      <p class="mea-text" style="margin-top:6px">Proposta depois da Rio+20, em 2012, a Rede Planetária do Tratado de Educação Ambiental foi reacendida em 23 de julho de 2025, em Manaus, com o nome PlanTEA. O relançamento coroou um processo formativo nos países de língua portuguesa.</p>
+      <div class="mea-plan">
+        <div class="mea-bignum"><span class="mea-bignum__n">300</span><span class="mea-bignum__t">pessoas no relançamento, no VIII Congresso Internacional de EA, em Manaus (aprox.)</span></div>
+        <div class="mea-bignum"><span class="mea-bignum__n">3 mil</span><span class="mea-bignum__t">pessoas de 9 países lusófonos e da Galícia nos diálogos sobre o Tratado (aprox.)</span></div>
+        <div class="mea-bignum"><span class="mea-bignum__n">200</span><span class="mea-bignum__t">rodas de conversa sobre o Tratado no primeiro semestre de 2025 (aprox.)</span></div>
+      </div>
+      <h3 class="mea-subh">Por que planetária, e não internacional</h3>
+      <p class="mea-text" style="margin-top:4px">A referência da Rede não é um acordo entre Estados nacionais, e sim um acordo de cooperação entre pessoas, comunidades, povos e sociedades. Pensar de forma planetária é assumir a vida do planeta como referência principal.</p>
+      <h3 class="mea-subh">A missão: a EA no centro</h3>
+      <p class="mea-text" style="margin-top:4px">Definida em Serra Serena, em 2012, e retomada em 2025: trazer a Educação Ambiental para o seu devido lugar, o centro, em três espaços.</p>
       <div class="mea-three">
         <div class="mea-box"><span class="mea-box__name">Centro da Vida Cotidiana</span><span class="mea-note" style="color:inherit">Educação ao longo da vida, popular e não formal.</span></div>
         <div class="mea-box"><span class="mea-box__name">Centro dos Sistemas Educacionais</span><span class="mea-note" style="color:inherit">Ensino formal, incluindo a educação de jovens e adultos.</span></div>
         <div class="mea-box"><span class="mea-box__name">Centro da Gestão Ambiental</span><span class="mea-note" style="color:inherit">Diálogo com instâncias globais, como UNESCO, IPCC e o Caucus de EA da ONU.</span></div>
       </div>
-      <div class="mea-actions"><a class="mea-btn mea-btn--secondary" href="o-que-restou-rio20.pdf#page=8" target="_blank" rel="noopener" data-dk="restou" data-dp="8">Ler a proposta da Rede</a></div>
+      <div class="mea-actions"><a class="mea-btn mea-btn--secondary" href="livro-vamos-virar-o-jogo-trechos.pdf#page=7" target="_blank" rel="noopener" data-dk="livro" data-dp="7">Ler sobre o relançamento (2025)</a><a class="mea-btn mea-btn--ghost" href="o-que-restou-rio20.pdf#page=8" target="_blank" rel="noopener" data-dk="restou" data-dp="8">Ler a proposta de 2012</a></div>
+    </div>
+
+    <div class="mea-panel" id="quest">
+      <p class="mea-panel__label">Questionário do processo formativo, 2025 · cerca de 140 respostas</p>
+      <h2 class="mea-panel__title">O que a Rede quer ser</h2>
+      <p class="mea-text" style="margin-top:6px">Ao fim dos diálogos lusófonos, quem participou respondeu como imagina a Rede do Tratado.</p>
+      <div class="mea-plan">
+        <div class="mea-bignum"><span class="mea-bignum__n">77,7%</span><span class="mea-bignum__t">querem participar ativamente da Rede (mais 18% de forma pontual)</span></div>
+        <div class="mea-bignum"><span class="mea-bignum__n">96,4%</span><span class="mea-bignum__t">têm interesse em integrar um grupo de trabalho</span></div>
+        <div class="mea-bignum"><span class="mea-bignum__n">46,7%</span><span class="mea-bignum__t">já conheciam o Tratado (36,2% não, 17,2% talvez)</span></div>
+      </div>
+      <div class="mea-qgrid">
+        <div><h3 class="mea-subh">Ações prioritárias</h3><ul class="mea-bars" id="qAcoes"></ul></div>
+        <div><h3 class="mea-subh">Como querem contribuir</h3><ul class="mea-bars" id="qContrib"></ul></div>
+        <div><h3 class="mea-subh">Formato de comunicação</h3><ul class="mea-bars" id="qFormato"></ul></div>
+      </div>
+      <p class="mea-note" style="margin-top:14px">Percentuais sobre o total de respostas; cada pessoa podia marcar mais de uma opção. O total de cerca de 140 foi calculado a partir dos números do próprio questionário.</p>
+      <div class="mea-actions"><a class="mea-btn mea-btn--secondary" href="sistematizacao-questionario-rede.pdf#page=6" target="_blank" rel="noopener" data-dk="quest" data-dp="6">Ver a sistematização completa</a></div>
     </div>
 
     <div class="mea-panel" id="nos">
       <p class="mea-panel__label">Adesões recebidas pelo formulário · contagem provisória</p>
       <div class="mea-titlerow"><h2 class="mea-panel__title">Os nós da Rede</h2><button class="mea-help" type="button" data-lgpd aria-label="Como a Rede se mostra sem expor pessoas (LGPD)">?</button></div>
       <div class="mea-kpis" id="kpis" style="margin-top:12px"></div>
+      <p class="mea-note" style="margin-top:12px">As adesões começaram em 23 de julho de 2025, dia do relançamento da PlanTEA em Manaus: 48 das 67 respostas chegaram nesse dia. Guiné Equatorial e Moçambique, os dois países fora do Brasil, integram a CPLP.</p>
       <div class="mea-mapbar" style="margin-top:16px">
         <div class="mea-seg" role="group" aria-label="Escala do mapa"><button class="mea-seg__opt" type="button" data-view="br" aria-pressed="true">Brasil</button><button class="mea-seg__opt" type="button" data-view="mundo" aria-pressed="false">Mundo</button></div>
         <button class="mea-btn mea-btn--ghost" type="button" id="mapReset" hidden>Ver o mundo todo</button>
@@ -640,21 +706,42 @@ textarea.mea-input{border-radius:var(--radius-box);padding:12px 18px;min-height:
           <p class="mea-note">Apoio de MMA, MEC, Itaipu Binacional, SEA/RJ e SEMA/RS, entre outros.</p></li>
         <li class="mea-who"><span class="mea-who__yr">2011 · Internacional</span><h3 class="mea-who__t">Comitê Facilitador Internacional</h3>
           <ul class="mea-orgs"><li><b>ICAE</b><span>Educação de Adultos</span></li><li><b>CEAAL</b><span>América Latina</span></li><li><b>REPEM</b><span>Educação Popular com Mulheres</span></li><li><b>Centro de Saberes</b><span>Bacia do Prata</span></li><li><b>ASPBAE</b><span>Ásia e Pacífico Sul</span></li><li><b>ASPEA</b><span>Portugal</span></li><li><b>NEREA</b><span>Cabo Verde</span></li><li><b>Brahma Kumaris</b><span>Índia</span></li><li><b>Siglo XXIII</b><span>El Salvador</span></li><li><b>CES-Phil</b><span>Filipinas</span></li><li><b>Climate Justice Network</b><span>Índia</span></li></ul></li>
+        <li class="mea-who"><span class="mea-who__yr">2024–2025 · Língua portuguesa</span><h3 class="mea-who__t">3ª Jornada e PlanTEA</h3>
+          <ul class="mea-orgs"><li><b>Anppea</b><span>Articulação Nacional de Políticas Públicas de EA</span></li><li><b>Rebea</b><span>Rede Brasileira de Educação Ambiental</span></li><li><b>Peregum</b><span>Instituto de Referência Negra</span></li><li><b>RedeLuso</b><span>Rede Lusófona de Educação Ambiental</span></li><li><b>DEA/MMA</b><span>articulação no governo federal</span></li></ul></li>
       </ol>
     </div>
   </section>
   <!-- ===================== DOCUMENTOS ===================== -->
   <section class="mea-pane" id="documentos" role="tabpanel" aria-labelledby="t-documentos" hidden>
     <div class="mea-panel">
-      <p class="mea-panel__label">Acervo</p>
-      <h2 class="mea-panel__title">Documentos e vídeos de referência</h2>
-      <p class="mea-text" style="margin-top:6px">Escolha um item e leia ou assista aqui mesmo. As páginas citadas na história abrem direto no ponto certo.</p>
+      <h2 class="mea-panel__title">Documentos</h2>
+      <p class="mea-text" style="margin-top:6px">Tudo o que sustenta esta página, em três conjuntos: as fontes da história, as obras que dialogam com o Tratado e os registros em vídeo.</p>
+      <div class="mea-seg mea-docnav" role="group" aria-label="Conjunto de documentos" style="margin-top:14px">
+        <button class="mea-seg__opt" type="button" data-dview="fontes" aria-pressed="true">Fontes da história <span class="mea-docnav__n" id="dn-fontes"></span></button>
+        <button class="mea-seg__opt" type="button" data-dview="obras" aria-pressed="false">Obras relacionadas <span class="mea-docnav__n" id="dn-obras"></span></button>
+        <button class="mea-seg__opt" type="button" data-dview="videos" aria-pressed="false">Vídeos <span class="mea-docnav__n" id="dn-videos"></span></button>
+      </div>
     </div>
+    <div class="mea-dview" id="dv-fontes">
     <div class="mea-acervo">
-      <div class="mea-acervo__list" id="docList" role="group" aria-label="Escolha um documento ou vídeo"></div>
-      <div class="mea-panel mea-viewer" id="viewer"></div>
+        <div class="mea-acervo__list" id="docList" role="group" aria-label="Escolha um documento"></div>
+        <div class="mea-panel mea-viewer" id="viewer"></div>
+      </div>
+      <p class="mea-note">Site citado nos documentos: <a href="https://www.tratadoeducacaoambiental.net" target="_blank" rel="noopener" style="color:var(--mea-blue-600)">www.tratadoeducacaoambiental.net</a></p>
     </div>
-    <p class="mea-note">Site citado nos documentos: <a href="https://www.tratadoeducacaoambiental.net" target="_blank" rel="noopener" style="color:var(--mea-blue-600)">www.tratadoeducacaoambiental.net</a></p>
+    <div class="mea-dview" id="dv-obras" hidden>
+    <div class="mea-panel" id="obras">
+      <div class="mea-conhead"><div><p class="mea-panel__label">Pesquisas, livros e artigos</p><h2 class="mea-panel__title">Obras que dialogam com o Tratado</h2></div><div class="mea-tags" id="obraFiltro" role="group" aria-label="Filtrar por tipo de obra"></div></div>
+      <div class="mea-obras" id="obraList"></div>
+    </div>
+    </div>
+    <div class="mea-dview" id="dv-videos" hidden>
+    <div class="mea-panel" id="videos">
+      <p class="mea-panel__label">Registros em vídeo</p>
+      <h2 class="mea-panel__title">Vídeos</h2>
+      <div class="mea-vids" id="vidList"></div>
+    </div>
+    </div>
   </section>
   <details class="mea-panel mea-sig" id="siglas">
       <summary><span><span class="mea-panel__label" style="display:block">Glossário</span><span class="mea-panel__title">Siglas que aparecem nos documentos</span></span></summary>
@@ -665,7 +752,7 @@ textarea.mea-input{border-radius:var(--radius-box);padding:12px 18px;min-height:
 <footer class="mea-footer">
   <div class="mea-wrap mea-footer__inner">
     <div data-logo="monitoraea-logo.png" data-min="1"></div>
-    <p>Programa MonitoraEA · LADIS/INPE. Fontes: os documentos e vídeos listados nesta página; versão de validação, composição provisória.</p>
+    <p>Programa MonitoraEA · LADIS/INPE. Fontes: os documentos, obras e vídeos listados nesta página; versão de validação, composição provisória.</p>
   </div>
 </footer>
 
@@ -766,7 +853,9 @@ var D={
   restou:{f:'o-que-restou-rio20.pdf',s:'Rio+20'},
   caderno:{f:'caderno-itaipu.pdf',s:'Caderno'},
   video:{f:'',s:'Vídeo 1992',vid:1},
-  michele:{f:'',s:'Vídeo Michèle Sato',vid:1}
+  michele:{f:'',s:'Vídeo Michèle Sato',vid:1},
+  livro:{f:'livro-vamos-virar-o-jogo-trechos.pdf',s:'Livro 2025'},
+  quest:{f:'sistematizacao-questionario-rede.pdf',s:'Questionário 2025'}
 };
 var CH=[
 {id:'c1',cls:'92',yrs:'1992',title:'O Tratado nasce na Rio-92',intro:'No Fórum Global da sociedade civil, ONGs e movimentos socioambientais elaboram, pela primeira vez, seus próprios tratados. Entre eles, o de EA, com princípios e plano de ação.',
@@ -808,7 +897,20 @@ var CH=[
  {y:2012.65,w:'24–26 de agosto de 2012',type:'marco',h:'Encontro de imersão em Serra Serena',p:'Na Ecovila Serra Serena, com a Brahma Kumaris, a SE planeja a transição. A missão e os três centros da Rede aparecem na seção “Rede Planetária”, no fim da página.',more:'Valores destacados pelo grupo: ética do cuidado, amor, diálogo e respeito.',src:[['restou',7],['restou',8],['restou',9]]},
  {y:2012.8,w:'set–nov de 2012',type:'processo',h:'Proposta inicial em três meses',p:'Três eixos: organização, articulação e mobilização. A SE da Rede é um serviço internacional a favor das alianças, e o Brasil não é a referência a ser replicada.',src:[['restou',11],['restou',12]],nodot:true},
  {y:2013.4,w:'2012–2014',type:'plan',h:'Pontos de encontro previstos',p:'Encontro da Rede Lusófona de EA em Cuiabá (outubro de 2012); congresso de EA em Marrakech; encerramento da Década da Educação para o Desenvolvimento Sustentável, no Japão (2014).',check:'O texto cita Marrakech em 2012 e, mais adiante, em junho de 2013.',src:[['restou',11],['restou',12]]},
- {y:2014.1,w:'depois de 2012',type:'lacuna',h:'O que aconteceu com a Rede Planetária?',p:'Espaço reservado para a continuidade da Rede e para a ligação com iniciativas atuais, incluindo o MonitoraEA.',nodot:true}
+ {y:2014.1,w:'2013–2024',type:'lacuna',h:'O que aconteceu com a Rede Planetária neste intervalo?',p:'Os documentos não registram a atividade da Rede entre 2013 e 2024. A retomada vem em 2025, com a 3ª Jornada e a PlanTEA.',nodot:true}
+ ]}
+,
+{id:'c7',cls:'12',yrs:'2023–2025',title:'A 3ª Jornada, rumo à Cúpula dos Povos na COP30',intro:'O Tratado volta à pauta diante da crise climática. A 3ª Jornada Internacional de Educação Ambiental se organiza rumo à Cúpula dos Povos na COP30, em Belém, e a Rede Planetária é reacendida.',
+ ms:[
+ {y:2023.5,w:'2023',type:'processo',h:'Um diagnóstico: pouca EA nos acordos internacionais',p:'Ao buscar alinhamento entre as políticas brasileiras de Educação Ambiental e os acordos internacionais, o governo federal nota que a EA ainda aparece de forma incipiente nesses documentos, sem compromissos concretos de estruturas, normas e recursos.',src:[['livro',3]]},
+ {y:2024.9,w:'nov 2024 – jul 2025',type:'processo',h:'Diálogos lusófonos sobre o Tratado',p:'Cerca de 3 mil pessoas de nove países de língua portuguesa e da Galícia debatem os princípios do Tratado diante das mudanças climáticas e do racismo ambiental, em cerca de 200 rodas de conversa.',more:'Coordenação de Anppea, Rebea, Instituto de Referência Negra Peregum, RedeLuso e DEA/MMA. Países: Angola, Brasil, Cabo Verde, Guiné-Bissau, Guiné Equatorial, Moçambique, Portugal, São Tomé e Príncipe e Timor-Leste.',check:'O capítulo da 3ª Jornada data os diálogos de novembro de 2024 a julho de 2025; o capítulo da PlanTEA fala em janeiro a junho de 2025.',src:[['livro',4],['livro',5],['livro',7],['livro',9]]},
+ {y:2025.25,w:'1º semestre de 2025',type:'documento',h:'Questionário sobre a Rede do Tratado',p:'Ao fim do processo formativo, um questionário ouve quem participou dos diálogos. Cerca de 140 pessoas respondem: 77,7% querem participar ativamente da Rede e 96,4% têm interesse em integrar um grupo de trabalho.',more:'Menos da metade (46,7%) dizia já conhecer o Tratado. As ações mais pedidas são intercâmbio de experiências (77%) e apoio a projetos locais (62,6%); o formato preferido de comunicação são grupos de WhatsApp ou Telegram (72,7%). Veja os resultados completos na aba Rede Planetária.',src:[['quest',3],['quest',6],['quest',7],['quest',9]]},
+ {y:2025.3,w:'2025',type:'marco',h:'A 3ª Jornada Internacional de Educação Ambiental',p:'Rumo à COP30, a 3ª Jornada de Educação Ambiental para Sociedades Sustentáveis e Responsabilidade Global se organiza como processo pedagógico e político de escala internacional, construído nos territórios. O DEA/MMA tem papel articulador, mas a Jornada não pertence a uma única instituição.',list:['Pontos de Parada: espaços de troca, escuta e proposição sobre a EA diante da crise climática','Diálogos lusófonos sobre o Tratado','Campanha “Educação Ambiental vira o Jogo!”','Balanço Ético Global, adaptado para crianças e adolescentes'],src:[['livro',3],['livro',4]]},
+ {y:2025.55,w:'21–25 de julho de 2025',type:'evento',h:'VIII Congresso Internacional de EA dos Países e Comunidades de Língua Portuguesa, em Manaus',p:'Ponto de Parada emblemático da 3ª Jornada, com representantes de todos os países da CPLP e da Galícia. Na abertura, a ministra Marina Silva chama esses encontros de “momentos de parada”.',src:[['livro',2],['livro',4]]},
+ {y:2025.56,w:'23 de julho de 2025',type:'marco',h:'A Rede Planetária é reacendida: lançamento da PlanTEA',p:'Durante o VIII Congresso, em Manaus, a Rede Planetária do Tratado de Educação Ambiental (PlanTEA) é relançada, com cerca de 300 pessoas.',more:'No mesmo dia começam as adesões pelo formulário da Rede: 48 das 67 respostas recebidas até hoje chegaram em 23 de julho de 2025.',src:[['livro',7],['livro',5]]},
+ {y:2025.6,w:'2025',type:'evento',h:'Campanha “Educação Ambiental vira o Jogo!”',p:'Nascida dos Pontos de Parada, a campanha trata a COP do Brasil como a “COP da virada” e defende a EA como força de virada: uma estratégia política e cultural, além de ferramenta pedagógica.',src:[['livro',5]]},
+ {y:2025.75,w:'2025',type:'processo',h:'Balanço Ético Global',p:'Iniciativa da Presidência da República, do Secretariado-Geral da ONU, do MMA e do Ministério das Relações Exteriores, inspirada no Balanço Global do Acordo de Paris. A 3ª Jornada a incorpora em versão para crianças e adolescentes, com cinco perguntas orientadoras.',src:[['livro',5],['livro',6]]},
+ {y:2025.85,w:'novembro de 2025',type:'evento',h:'COP30, em Belém',p:'Horizonte da 3ª Jornada. O capítulo, escrito antes da conferência, projeta a Jornada para além de novembro de 2025, como uma rede viva de educadoras, educadores, instituições e movimentos.',src:[['livro',6]]}
  ]}
 ];
 var TYPES={marco:'Marco',evento:'Evento',documento:'Documento',processo:'Processo',plan:'Previsto',lacuna:'Lacuna'};
@@ -817,9 +919,9 @@ function srcLinks(a){return a.map(function(x){var d=D[x[0]];return '<a class="me
 function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
 
 
-var THUMB={tratado:'doc-tratado.jpg',folder:'doc-folder.jpg',restou:'doc-restou.jpg',caderno:'doc-caderno.jpg'};
-var SHORT={tratado:'O Tratado (1992)',folder:'Folder da 2ª Jornada',restou:'O que restou da Rio+20',caderno:'Caderno da Itaipu',video:'Vídeo da 1ª Jornada',michele:'Vídeo com Michèle Sato'};
-var KIND={tratado:'Texto-base',folder:'Folder',restou:'Relato',caderno:'Livro',video:'Vídeo',michele:'Vídeo'};
+var THUMB={quest:'doc-quest.jpg',livro:'doc-livro.jpg',tratado:'doc-tratado.jpg',folder:'doc-folder.jpg',restou:'doc-restou.jpg',caderno:'doc-caderno.jpg'};
+var SHORT={tratado:'O Tratado (1992)',folder:'Folder da 2ª Jornada',restou:'O que restou da Rio+20',caderno:'Caderno da Itaipu',livro:'Livro Vamos Virar o Jogo',quest:'Questionário sobre a Rede',video:'Vídeo da 1ª Jornada',michele:'Vídeo com Michèle Sato'};
+var KIND={tratado:'Texto-base',folder:'Folder',restou:'Relato',caderno:'Livro',livro:'Livro, 2025',quest:'Apresentação, 2025',video:'Vídeo',michele:'Vídeo'};
 /* Para incorporar os vídeos, cole o link do YouTube, do Vimeo ou de um arquivo .mp4. Vazio, o leitor mostra um espaço reservado. */
 var VIDEO={video:'',michele:''};
 var PLAY='<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
@@ -830,7 +932,7 @@ function countTo(el,to,dur){
   if(REDUCE){el.textContent=fmt(to);return}
   var t0=null;function f(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/dur);el.textContent=fmt(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f);
 }
-var Y0=1990.9,Y1=2014.4;function pct(y){return (y-Y0)/(Y1-Y0)*100}
+var Y0=1990.9,Y1=2026.2;function pct(y){return (y-Y0)/(Y1-Y0)*100}
 function yy(w){var m=String(w).match(/(19|20)(\d\d)/);return m?"’"+m[2]:'…'}
 function lp(a){return a.map(function(x){var d=D[x[0]];return '<a class="mea-lp" data-dk="'+x[0]+'" data-dp="'+(x[1]||'')+'" href="'+d.f+(x[1]?'#page='+x[1]:'')+'" target="_blank" rel="noopener"><span class="mea-lp__th">'+(D[x[0]].vid?PLAY:'<img src="'+THUMB[x[0]]+'" alt="" loading="lazy">')+'</span><span><span class="mea-lp__t">'+SHORT[x[0]]+'</span><span class="mea-lp__m">'+KIND[x[0]]+(x[1]?' · p. '+x[1]:'')+'</span></span></a>'}).join('')}
 
@@ -849,7 +951,7 @@ function setTabsH(){var t=$('tabbar');if(t)document.documentElement.style.setPro
 addEventListener('resize',setTabsH);setTimeout(setTabsH,50);
 document.querySelector('.mea-tabs').addEventListener('click',function(e){var b=e.target.closest('[data-tab]');if(b)showTab(b.dataset.tab)});
 document.querySelector('.mea-tabs').addEventListener('keydown',function(e){
-  var i=TABS.indexOf(curTab);if(e.key==='ArrowRight')i=(i+1)%4;else if(e.key==='ArrowLeft')i=(i+3)%4;else return;
+  var i=TABS.indexOf(curTab);if(e.key==='ArrowRight')i=(i+1)%TABS.length;else if(e.key==='ArrowLeft')i=(i+TABS.length-1)%TABS.length;else return;
   e.preventDefault();showTab(TABS[i]);$('t-'+TABS[i]).focus();
 });
 function reveal(id){
@@ -936,7 +1038,7 @@ $('chapters').addEventListener('click',function(e){
 
 /* ---------- linha do tempo (barra "você está em") ---------- */
 var S=$('strip');
-var LB={c1:'1992',c2:'92–06',c3:'06–08',c4:'09–11',c5:'2012',c6:'depois'},sh='';
+var LB={c1:'1992',c2:'92–06',c3:'06–08',c4:'09–11',c5:'2012',c6:'12–24',c7:'23–25'},sh='';
 CH.forEach(function(c){
   var k=c.ms.length;
   sh+='<div class="mea-seg2 mea-seg2--'+c.cls+'" style="flex:'+Math.max(k,3)+' 1 0"><div class="mea-seg2__bar"></div><span class="mea-seg2__lbl">'+LB[c.id]+'</span>';
@@ -1020,7 +1122,16 @@ var G=[['ICAE','Conselho Internacional de Educação de Adultos. Organizou a 1ª
 ['GTEducação','Grupo de Trabalho de Educação da Rio+20. Articulação da sociedade civil de que a Jornada participou, com ICAE, CLADE, FME, CEAAL e REPEM.'],
 ['GA','Grupo de Articulação da Cúpula dos Povos. Criado em 2011 no encontro do Instituto Bennett.'],
 ['Círculo dos Tratados dos Povos','Conjunto de tratados da sociedade civil na Rio+20. O Tratado de EA é o 12º.'],
-['REBEA e REJUMA','Rede Brasileira de Educação Ambiental e Rede de Juventude pelo Meio Ambiente. Integram a Secretaria Executiva.']];
+['REBEA e REJUMA','Rede Brasileira de Educação Ambiental e Rede de Juventude pelo Meio Ambiente. Integram a Secretaria Executiva da 2ª Jornada; a Rebea também coordena os diálogos de 2024–2025.'],
+['PlanTEA','Rede Planetária do Tratado de Educação Ambiental para Sociedades Sustentáveis e Responsabilidade Global. Proposta em 2012 e reacendida em 23 de julho de 2025, em Manaus.'],
+['Anppea','Articulação Nacional de Políticas Públicas de Educação Ambiental.'],
+['RedeLuso','Rede Lusófona de Educação Ambiental. Realizadora do VIII Congresso, em Manaus.'],
+['Peregum','Instituto de Referência Negra Peregum. Coordena, com outras redes, os diálogos lusófonos sobre o Tratado.'],
+['DEA/MMA','Departamento de Educação Ambiental e Cidadania do Ministério do Meio Ambiente e Mudança do Clima. Articulador da 3ª Jornada.'],
+['CPLP','Comunidade dos Países de Língua Portuguesa: Angola, Brasil, Cabo Verde, Guiné-Bissau, Guiné Equatorial, Moçambique, Portugal, São Tomé e Príncipe e Timor-Leste.'],
+['BEG','Balanço Ético Global. Escuta sobre os dilemas éticos da crise climática, conduzida no contexto da COP30.'],
+['Cúpula dos Povos','Espaço da sociedade civil paralelo às conferências da ONU. Reuniu os eventos da 2ª Jornada na Rio+20 e é o horizonte da 3ª Jornada na COP30.'],
+['COP30','30ª Conferência das Partes da Convenção-Quadro da ONU sobre Mudança do Clima, em Belém (PA), em novembro de 2025.']];
 document.getElementById('gloss').innerHTML=G.map(function(g){return '<dt>'+g[0]+'</dt><dd>'+g[1]+'</dd>'}).join('');
 
 
@@ -1042,12 +1153,12 @@ var DOCS=[
  {k:'caderno',type:'Livro digitalizado',t:'Caderno Tratado de Educação Ambiental (Itaipu Binacional)',short:'Caderno da Itaipu',
   what:'Traz o texto do Tratado, fotos de 1992 e o relato “Somos todos aprendizes”, de Moema Viezzer.',
   meta:['38 páginas','Itaipu Binacional'],tbd:['Data de publicação'],warn:'Resolução reduzida (5,4 MB) para caber na página.',b:'Abrir o PDF'},
- {k:'video',vid:1,type:'Vídeo',t:'Vídeo da 1ª Jornada Internacional (1992)',short:'Vídeo da 1ª Jornada (1992)',
-  what:'Registro em vídeo da tenda nº 6 do Fórum Global, com os mais de 500 educadores e os motivos do Tratado.',
-  meta:['Vídeo','Rio-92, 1992'],tbd:['Link do vídeo','Autoria'],b:'Abrir o vídeo'},
- {k:'michele',vid:1,type:'Vídeo',t:'Vídeo do Tratado de Educação Ambiental, com Michèle Sato',short:'Vídeo com Michèle Sato',
-  what:'Vídeo de apresentação do Tratado, com Michèle Sato.',
-  meta:['Vídeo'],tbd:['Link do vídeo','Data'],b:'Abrir o vídeo'}
+ {k:'livro',type:'Livro',t:'Vamos virar o jogo: tecendo na Amazônia a educação ambiental pelo clima e pela vida! (trechos)',short:'Livro Vamos Virar o Jogo (2025)',
+  what:'Livro do VIII Congresso Internacional de Educação Ambiental dos Países e Comunidades de Língua Portuguesa (Manaus, 2025). Este arquivo traz a capa, a ficha e dois capítulos: “3ª Jornada de Educação Ambiental para sociedades sustentáveis e responsabilidade global rumo à COP30” (p. 3 a 6) e “Reacendendo a Rede Planetária… PlanTEA” (p. 7 a 9).',
+  meta:['9 páginas (trechos)','Editora INPA, 2025'],tbd:[],b:'Abrir o PDF',full:'https://doi.org/10.61818/56330747'},
+ {k:'quest',type:'Apresentação',t:'Sistematização do questionário sobre a Rede do Tratado',short:'Questionário sobre a Rede (2025)',
+  what:'Apresentação do processo “Diálogos entre Países e Comunidades de Língua Portuguesa…”, com os resultados do questionário sobre a Rede do Tratado: conhecimento do Tratado, interesse em participar, ações prioritárias, formas de contribuir e formatos de comunicação.',
+  meta:['12 slides','Anppea, Rebea, Peregum, RedeLuso e MMA, 2025'],tbd:['Data exata'],b:'Abrir o PDF'}
 ];
 
 var DBY={};DOCS.forEach(function(d){DBY[d.k]=d});
@@ -1078,7 +1189,7 @@ function showDoc(k,page,go){
   var d=DBY[k];curDoc=k;
   Array.prototype.forEach.call(dl.querySelectorAll('.mea-doci'),function(b){b.setAttribute('aria-pressed',b.dataset.doc===k)});
   var cs=(cites[k]||[]).slice().sort(function(a,b){return (a.p||0)-(b.p||0)});
-  var act=d.vid?(VIDEO[k]?'<a class="mea-btn mea-btn--primary" href="'+VIDEO[k]+'" target="_blank" rel="noopener">Abrir o vídeo em nova aba</a>':''):'<a class="mea-btn mea-btn--primary" href="'+D[k].f+'" target="_blank" rel="noopener">'+d.b+' em nova aba</a>'+(k==='tratado'?'<a class="mea-btn mea-btn--secondary" href="#princ">Ler os 16 princípios aqui</a>':'');
+  var act=d.vid?(VIDEO[k]?'<a class="mea-btn mea-btn--primary" href="'+VIDEO[k]+'" target="_blank" rel="noopener">Abrir o vídeo em nova aba</a>':''):'<a class="mea-btn mea-btn--primary" href="'+D[k].f+'" target="_blank" rel="noopener">'+d.b+' em nova aba</a>'+(k==='tratado'?'<a class="mea-btn mea-btn--secondary" href="#princ">Ler os 16 princípios aqui</a>':'')+(d.full?'<a class="mea-btn mea-btn--secondary" href="'+d.full+'" target="_blank" rel="noopener">Livro completo (DOI)</a>':'');
   vw.innerHTML='<div class="mea-doc__meta"><span class="mea-chip mea-chip--current">'+d.type+'</span>'+d.meta.filter(function(m){return m!==d.type}).map(function(m){return '<span class="mea-chip">'+m+'</span>'}).join('')+d.tbd.filter(function(t){return !(d.vid&&VIDEO[k]&&t==='Link do vídeo')}).map(TBD).join('')+'</div>'+
    '<div><h3 class="mea-panel__title">'+d.t+'</h3><p class="mea-text" style="margin-top:6px">'+d.what+'</p></div>'+
    (d.warn?'<p class="mea-warn"><b>Atenção:</b> '+d.warn+'</p>':'')+
@@ -1089,7 +1200,7 @@ function showDoc(k,page,go){
       return '<li>'+(c.p&&!d.vid?'<button type="button" class="mea-chip" data-pg="'+c.p+'">p. '+c.p+'</button>':'<span class="mea-chip">'+(d.vid?'vídeo':'texto')+'</span>')+'<span class="mea-cites__t"><b>'+c.w+'</b> · '+c.h+'</span><button type="button" class="mea-cites__go" data-ms="'+c.id+'">Ver na linha do tempo ›</button></li>';
    }).join('')+'</ul>':'<p class="mea-note">Ainda não citado na linha do tempo.</p>')+'</div>';
   frame(k,page||1);
-  if(go){showTab('documentos');}
+  if(go){showTab('documentos');setDocView('fontes');}
 }
 dl.addEventListener('click',function(e){var b=e.target.closest('[data-doc]');if(b)showDoc(b.dataset.doc)});
 vw.addEventListener('click',function(e){
@@ -1100,9 +1211,62 @@ showDoc('tratado');
 /* qualquer link de fonte abre o leitor na página certa */
 document.addEventListener('click',function(e){
   var a=e.target.closest('a[data-dk]');if(!a)return;
-  e.preventDefault();if(!veil.hidden)closeJ();showDoc(a.dataset.dk,a.dataset.dp||1,true);
+  e.preventDefault();if(!veil.hidden)closeJ();if(D[a.dataset.dk]&&D[a.dataset.dk].vid){showTab('documentos',false);setDocView('videos');var vv=$('v-'+a.dataset.dk);if(vv){vv.scrollIntoView({behavior:REDUCE?'auto':'smooth',block:'start'});vv.classList.remove('is-flash');void vv.offsetWidth;vv.classList.add('is-flash')}return}showDoc(a.dataset.dk,a.dataset.dp||1,true);
   setTimeout(function(){var y=$('viewer').getBoundingClientRect().top+scrollY-90;scrollTo({top:y,behavior:REDUCE?'auto':'smooth'})},30);
 });
+
+/* ---------- conexões: obras e vídeos ---------- */
+/* Para incluir uma obra, acrescente um item a OBRAS. Campos: tipo, ano, t (título), a (autoria), v (onde foi publicada), rel (como dialoga com o Tratado), url, pdf, ref (referência ABNT). */
+var OBRAS=[
+ {tipo:'Artigo',ano:2018,t:'Indicadores de Políticas Públicas de Educação Ambiental: construção à luz do Tratado de Educação Ambiental para Sociedades Sustentáveis e Responsabilidade Global e da Política Nacional de Educação Ambiental',
+  a:'Maria Henriqueta Andrade Raymundo, Evandro Albiach Branco e Semíramis Biasoli',
+  v:'Cadernos de Pesquisa: Pensamento Educacional, v. 13, n. especial, p. 337–358, 2018',
+  rel:'Usa o Tratado, ao lado da Política Nacional de Educação Ambiental, como referência para construir, de forma participativa, oito dimensões de indicadores de monitoramento e avaliação de políticas públicas de EA.',
+  url:'https://seer.utp.br/index.php/a/article/view/1209',pdf:'https://seer.utp.br/index.php/a/article/download/1209/1040/',
+  ref:'RAYMUNDO, Maria Henriqueta Andrade; BRANCO, Evandro Albiach; BIASOLI, Semíramis. Indicadores de políticas públicas de educação ambiental: construção à luz do Tratado de Educação Ambiental para Sociedades Sustentáveis e Responsabilidade Global e da Política Nacional de Educação Ambiental. Cadernos de Pesquisa: Pensamento Educacional, v. 13, n. especial, p. 337-358, 2018. DOI: 10.35168/2175-2613.UTP.pens_ed.2018.Vol13.NEspecial.pp337-358.'}
+];
+var VIDS=[
+ {k:'video',vid:1,type:'Vídeo',t:'Vídeo da 1ª Jornada Internacional (1992)',short:'Vídeo da 1ª Jornada (1992)',
+  what:'Registro em vídeo da tenda nº 6 do Fórum Global, com os mais de 500 educadores e os motivos do Tratado.',
+  meta:['Vídeo','Rio-92, 1992'],tbd:['Link do vídeo','Autoria']},
+ {k:'michele',vid:1,type:'Vídeo',t:'Vídeo do Tratado de Educação Ambiental, com Michèle Sato',short:'Vídeo com Michèle Sato',
+  what:'Vídeo de apresentação do Tratado, com Michèle Sato.',
+  meta:['Vídeo'],tbd:['Link do vídeo','Data']}
+];
+var obraTipo='todos';
+function renderObras(){
+  var tipos=[];OBRAS.forEach(function(o){if(tipos.indexOf(o.tipo)<0)tipos.push(o.tipo)});
+  $('obraFiltro').innerHTML=tipos.length>1?['todos'].concat(tipos).map(function(t){return '<button type="button" class="mea-tag" data-otipo="'+t+'" aria-pressed="'+(obraTipo===t)+'">'+(t==='todos'?'Todos':t+'s')+'</button>'}).join(''):'';
+  $('obraList').innerHTML=OBRAS.slice().sort(function(a,b){return b.ano-a.ano}).filter(function(o){return obraTipo==='todos'||o.tipo===obraTipo}).map(function(o){
+    return '<article class="mea-obra"><div class="mea-obra__cv" aria-hidden="true"><span>'+o.tipo+'</span><b>'+o.ano+'</b></div><div>'+
+     '<h3 class="mea-obra__t" style="margin-top:0">'+o.t+'</h3><p class="mea-obra__a">'+o.a+'</p><p class="mea-obra__v">'+o.v+'</p>'+
+     '<p class="mea-obra__rel"><b>Conexão com o Tratado:</b> '+o.rel+'</p>'+
+     '<div class="mea-actions">'+(o.url?'<a class="mea-btn mea-btn--primary" href="'+o.url+'" target="_blank" rel="noopener">Ler a obra</a>':'')+(o.pdf?'<a class="mea-btn mea-btn--secondary" href="'+o.pdf+'" target="_blank" rel="noopener">PDF</a>':'')+(o.ref?'<button class="mea-btn mea-btn--ghost" type="button" data-cite="'+OBRAS.indexOf(o)+'">Copiar referência</button>':'')+'</div></div></article>';
+  }).join('');
+}
+renderObras();
+$('obras').addEventListener('click',function(e){
+  var f=e.target.closest('[data-otipo]');if(f){obraTipo=f.dataset.otipo;renderObras();return}
+  var c=e.target.closest('[data-cite]');
+  if(c){var r=OBRAS[+c.dataset.cite].ref;if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(r).then(function(){toast('Referência copiada')},function(){toast('Não foi possível copiar')});else toast('Não foi possível copiar')}
+});
+$('vidList').innerHTML=VIDS.map(function(v){
+  var cs=cites[v.k]||[];
+  return '<article class="mea-vid" id="v-'+v.k+'"><div class="mea-vid__frame">'+(VIDEO[v.k]?vidEmbed(VIDEO[v.k],v.short):'<div class="mea-vph">'+PLAY.replace('width="22" height="22"','width="44" height="44"')+'<span>O vídeo será incorporado aqui.</span>'+TBD('Link do vídeo')+'</div>')+'</div>'+
+   '<h3 class="mea-vid__t">'+v.t+'</h3><p class="mea-text" style="font-size:13.5px">'+v.what+'</p>'+
+   '<div class="mea-doc__meta">'+v.tbd.filter(function(t){return !(VIDEO[v.k]&&t==='Link do vídeo')}).map(TBD).join('')+'</div>'+
+   (cs.length?'<ul class="mea-cites">'+cs.map(function(c){return '<li><span class="mea-cites__t"><b>'+c.w+'</b> · '+c.h+'</span><button type="button" class="mea-cites__go" data-ms="'+c.id+'">Ver na linha do tempo ›</button></li>'}).join('')+'</ul>':'')+'</article>';
+}).join('');
+$('vidList').addEventListener('click',function(e){var m=e.target.closest('[data-ms]');if(m)jump(m.dataset.ms)});
+function setDocView(v){document.querySelectorAll('[data-dview]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.dview===v)});['fontes','obras','videos'].forEach(function(k){$('dv-'+k).hidden=k!==v})}
+document.querySelector('.mea-docnav').addEventListener('click',function(e){var b=e.target.closest('[data-dview]');if(b)setDocView(b.dataset.dview)});
+$('dn-fontes').textContent=DOCS.length;$('dn-obras').textContent=OBRAS.length;$('dn-videos').textContent=VIDS.length;
+$('m-documentos').textContent=DOCS.length+' fontes · '+OBRAS.length+(OBRAS.length>1?' obras':' obra')+' · '+VIDS.length+' vídeos';
+/* questionário 2025 (valores da sistematização) */
+function qbars(id,arr){var mx=Math.max.apply(null,arr.map(function(x){return x[1]}));$(id).innerHTML=arr.map(function(x){return '<li><span>'+x[0]+'</span><b>'+String(x[1]).replace('.',',')+'%</b><span class="mea-bars__bar"><i style="width:'+(x[1]/mx*100)+'%"></i></span></li>'}).join('')}
+qbars('qAcoes',[['Intercâmbio de experiências',77],['Apoio a projetos locais',62.6],['Articulação política',58.3],['Capacitação',58.3],['Produção de materiais educativos',45.3]]);
+qbars('qContrib',[['Compartilhando experiências',68.3],['Organizando eventos e formações',61.9],['Apoiando projetos locais',61.9],['Desenvolvendo materiais educativos',48.9],['Participando da articulação',41.7]]);
+qbars('qFormato',[['Grupos no WhatsApp ou Telegram',72.7],['Videoconferência em reuniões regulares',59.7],['Redes sociais',27.3],['Site ou blog',23],['Outro',2.2]]);
 
 /* ---------- dados agregados da Rede (sem dados pessoais) ---------- */
 var NET={resp:67,inst:55,uf:16,
@@ -1271,7 +1435,7 @@ document.addEventListener('click',function(e){if(e.target.closest('[data-share]'
 var J=[
  {lbl:'1992',eye:'Etapa 1 · A Rio-92',t:'Um tratado escrito por educadores, ao lado da conferência da ONU',
   x:'Em 1992, o Rio de Janeiro recebe a conferência oficial da ONU sobre meio ambiente. Ao mesmo tempo, o Fórum Global reúne a sociedade civil, e pela primeira vez ONGs e movimentos elaboram seus próprios tratados. Na tenda nº 6, mais de 500 educadoras e educadores do mundo inteiro aprovam o Tratado de EA, depois de um ano de trabalho com oito regiões do mundo.',
-  n:{to:500,suf:'+'},nt:'educadoras e educadores na tenda nº 6, no Fórum Global',a:1991.7,b:1993.2,ch:'c1',src:[['video',null],['tratado',1],['caderno',11]]},
+  n:{to:500,suf:'+'},nt:'educadores na tenda nº 6 do Fórum Global',a:1991.7,b:1993.2,ch:'c1',src:[['video',null],['tratado',1],['caderno',11]]},
  {lbl:'Circulação',eye:'Etapa 2 · 1992–2006',t:'O Tratado circula por 14 anos',
   x:'Depois de 1992, o texto segue apoiando ações educativas e inspirando redes e organizações. No Brasil, é elevado a fonte inspiradora da política nacional de EA. Os documentos recebidos dizem pouco sobre esse período, e a página deixa o espaço aberto para completar.',
   n:{to:14},nt:'anos entre a 1ª e a 2ª Jornada (1992–2006)',a:1993.2,b:2006,ch:'c2',src:[['folder',2],['restou',1]]},
@@ -1280,24 +1444,27 @@ var J=[
   n:{txt:'2006'},nt:'o ano da decisão que reabriu a história',a:2006,b:2008.9,ch:'c3',src:[['restou',1],['restou',2],['folder',2]]},
  {lbl:'Caminhada',eye:'Etapa 4 · 2009–2011',t:'A Jornada ganha estrutura e parceiros',
   x:'Entre 2009 e 2011, a Jornada leva o Tratado a congressos e fóruns internacionais. Em 2011, nascem o Grupo de Articulação da Cúpula dos Povos e, em Guarulhos, a Secretaria Executiva definitiva e o Comitê Facilitador Internacional.',
-  n:{to:10},nt:'países representados no Comitê Facilitador Internacional (Guarulhos, agosto de 2011)',a:2009,b:2012,ch:'c4',src:[['restou',2],['restou',3],['folder',2]]},
+  n:{to:10},nt:'países no Comitê Facilitador Internacional, em 2011',a:2009,b:2012,ch:'c4',src:[['restou',2],['restou',3],['folder',2]]},
  {lbl:'Rio+20',eye:'Etapa 5 · 2012',t:'Quatro eventos no Rio de Janeiro',
   x:'Em 2012, sem recursos para trazer o Comitê, a Jornada se apoia nas alianças e ocupa quatro espaços: dois na Cúpula dos Povos, um no Parque dos Atletas e um no Planetário da Gávea. Participam cerca de 1.300 pessoas, entre sociedade civil, poder público e empresas. A Rede Planetária do Tratado é lançada em cada evento.',
   n:{to:1300},nt:'pessoas nos quatro eventos (valor aproximado)',a:2012,b:2012.6,ch:'c5',src:[['restou',5],['restou',6]]},
  {lbl:'Rede',eye:'Etapa 6 · Depois da Rio+20',t:'A Jornada vira Rede Planetária',
   x:'Em agosto de 2012, em Serra Serena, a Secretaria Executiva planeja a passagem da Jornada para a Rede Planetária. A missão é trazer a EA para o seu devido lugar, o centro: da vida cotidiana, dos sistemas educacionais e da gestão ambiental. A proposta tem três eixos: organização, articulação e mobilização.',
-  n:{to:3},nt:'centros onde a Rede quer colocar a EA',a:2012.6,b:2014.4,ch:'c6',src:[['restou',7],['restou',8],['restou',11]]}
+  n:{to:3},nt:'centros onde a Rede quer colocar a EA',a:2012.6,b:2014.4,ch:'c6',src:[['restou',7],['restou',8],['restou',11]]},
+ {lbl:'COP30',eye:'Etapa 7 · 2023–2025',t:'A 3ª Jornada e a Rede reacendida',
+  x:'Em 2023, o governo federal percebe que a Educação Ambiental quase não aparece nos acordos internacionais. Rumo à Cúpula dos Povos na COP30, em Belém, nasce a 3ª Jornada, com Pontos de Parada, diálogos sobre o Tratado em nove países de língua portuguesa e a campanha “Educação Ambiental vira o Jogo!”. Em 23 de julho de 2025, em Manaus, a Rede Planetária é reacendida com o nome PlanTEA.',
+  n:{txt:'3 mil'},nt:'pessoas nos diálogos lusófonos sobre o Tratado',a:2023,b:2025.9,ch:'c7',src:[['livro',3],['livro',4],['livro',7],['quest',2]]}
 ];
 
 var seen={};try{seen=JSON.parse(store('mea-tratado-vistas')||'{}')||{}}catch(e){seen={}}
-var SL=['’92','92–06','06–08','09–11','2012','2012+'];
+var SL=['’92','92–06','06–08','09–11','2012','12–14','2025'];
 function drawStories(){
   $('stories').innerHTML=J.map(function(s,i){return '<button type="button" class="mea-story'+(seen[i]?' is-seen':'')+'" role="listitem" data-st="'+i+'" aria-label="Etapa '+(i+1)+': '+s.lbl+(seen[i]?' (vista)':'')+'"><span class="mea-story__ring"><span class="mea-story__in">'+SL[i]+'</span></span><span class="mea-story__l">'+s.lbl+'</span></button>'}).join('');
 }
 drawStories();
 var veil=$('veil'),dlg=$('dlg'),cur=0,lastFocus=null;
 var sc=$('jScale');
-sc.innerHTML='<div class="mea-jscale__track"></div><div class="mea-jscale__seg" id="jSeg"></div>'+[1992,2000,2006,2012,2014].map(function(y){return '<span class="mea-jscale__tick'+(y===2014?' mea-jscale__tick--x':'')+'" style="left:'+pct(y)+'%">'+y+'</span>'}).join('');
+sc.innerHTML='<div class="mea-jscale__track"></div><div class="mea-jscale__seg" id="jSeg"></div>'+[1992,2000,2012,2025].map(function(y){return '<span class="mea-jscale__tick'+''+'" style="left:'+pct(y)+'%">'+y+'</span>'}).join('');
 var jSeg=$('jSeg');
 function renderStep(i,anim){
   cur=i;var s=J[i];seen[i]=1;store('mea-tratado-vistas',JSON.stringify(seen));drawStories();
